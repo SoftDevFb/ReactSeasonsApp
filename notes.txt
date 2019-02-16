@@ -1,0 +1,11 @@
+super(props)
+//Super makes sure Reacts constructor function still gets called
+//Technically after calling our own Constructor function, we override Reacts
+//built in Constructor function and this is why we use super(props)
+//If not called, error will show in browser telling you to call it
+
+
+constructor function
+//Constructor function is the first function called when instance 
+//of this class is 
+
