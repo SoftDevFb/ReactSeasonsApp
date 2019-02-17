@@ -9,3 +9,29 @@ constructor function
 //Constructor function is the first function called when instance 
 //of this class is 
 
+Class Based Component Constructor Example:
+  constructor(props) { 
+    super(props);          
+    
+    this.state = { lat: null, errorMessage: '' };           
+    }
+
+//Another way to initialize state other than using constructor
+//Babel will turn this into same as Constructor method above
+
+state = { lat: null, errorMessage: '' };
+
+
+
+//Render Method Example that includes conditional rendering:
+render() {
+      if(this.state.errorMessage && !this.state.lat) {
+          return <div>Error: {this.state.errorMessage}</div>
+      }
+
+      if(!this.state.errorMessage && this.state.lat) {
+          return <div>Latitude: {this.state.lat}</div>
+      }
+
+      return <div>Loading!</div>
+    }
